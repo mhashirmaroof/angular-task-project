@@ -1,0 +1,52 @@
+<div class="showOverlay" *ngIf="overlayshow"></div>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Configurations</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Thresholds</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row mb-1">
+                <div class="col-sm-12 tree-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="card-title">Thresholds</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-2">
+                            <div class="main-canvas">
+                                <div *ngFor="let item of dataReceived; index as index" class="d-flex looping">
+                                    <div [style.backgroundColor]="item.color" class="invert">
+                                        <h4 class="h4">{{item.name}}</h4>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5>Space For New internal Component</h5>
+                                    </div>
+                                    <img class="delBtn" (click)="deleteData(index)" src="../../assets/images/delete-icon.svg" />
+
+                                </div>
+                                <div>
+                                    <a class="add-force-area tree-add-action p-3" (click)="showModelCatagory()">
+                                        <i class="fas fa-plus mr-1"></i>
+                                        Add New Category
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-add-catagory class="catagoryModel" *ngIf="showCatagoryModel" (modelClose)="modelClose($event)"
+    (sendFormData)="sendFormData($event)"></app-add-catagory>

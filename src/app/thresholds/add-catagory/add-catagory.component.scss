@@ -1,0 +1,248 @@
+.single-color-box {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.single-color-box:hover {
+    transform: scale(1.1);
+}
+
+.single-color-box.active {
+    background-image: url('../../../assets/images/selected-icon.svg');
+    background-size: 32%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.single-color-box.default {
+    background-color: #4b88bc;
+}
+
+.single-color-box.orange {
+    background-color: #FB760D;
+}
+
+.single-color-box.red {
+    background-color: #B71E3E;
+}
+
+.single-color-box.yellow {
+    background-color: #f7a532;
+}
+
+.single-color-box.green {
+    background-color: #21CC97;
+}
+
+.single-color-box.turkuaz {
+    background-color: #109aa4;
+}
+
+.single-color-box.blue {
+    background-color: #6599FF;
+}
+
+.single-color-box.dark-gray {
+    background-color: #464646;
+}
+
+.single-color-box.light-gray {
+    background-color: #8b8b8b;
+}
+
+
+/*left side Modal*/
+
+.modal-dialog-slideout {
+    min-height: 100%;
+    margin: 0 0 0 auto;
+    background: rgba(29, 40, 68, 0.81);
+}
+
+.modal.fade .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(100%, 0)scale(1);
+    transform: translate(100%, 0)scale(1);
+}
+
+.modal.fade.show .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    display: flex;
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    height: 100%;
+}
+
+.modal.fade.show .modal-dialog.modal-dialog-slideout .modal-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal-dialog-slideout .modal-content {
+    border: 0;
+    border-radius: 0px;
+}
+
+.modal-dialog-slideout .modal-header {
+    display: block;
+}
+
+.modal-dialog-slideout .modal-header h5 {
+    float: left;
+}
+
+.border-tabs {
+    padding-bottom: 8px;
+}
+
+.border-tabs li a.active {
+    color: #b68a35;
+    border-bottom: 3px solid #b68a35;
+}
+
+.border-tabs li a {
+    color: #384E64;
+    font-weight: bold;
+    padding: 0px 12px 8px 12px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+body .left-side-modal {
+    padding-right: 0px !important;
+}
+
+/*end left side Modal*/
+.form-container {
+    border-radius: 7px;
+    background-color: #f4f7f9;
+    padding: 0.6em;
+}
+
+.row {
+    margin-right: -7.5px !important;
+    margin-left: -7.5px !important;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.selectator_element.multiple {
+    padding-right: 20px !important;
+    padding-bottom: 5px !important;
+}
+
+.multiple {
+    width: 100% !important;
+}
+
+.selectator_element {
+    border-radius: 180px;
+    background-color: #ffffff;
+    border: 1px solid #cdd8dc;
+    color: #708790;
+    font-size: 14px;
+}
+
+.selectator_input,
+.selectator_textlength {
+    border: 0;
+    display: inline-block;
+    margin: 0;
+    background-color: transparent;
+    font-size: 13px;
+    outline: none;
+}
+
+.selectator_options {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #7f9db9;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    z-index: 101;
+    background-color: #fff;
+    overflow-y: scroll;
+    max-height: 250px;
+    list-style: none;
+    left: -1px;
+    right: -1px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
+}
+
+.options-hidden .selectator_options {
+    display: none;
+}
+
+.selectator_element:after {
+    position: absolute;
+    cursor: pointer;
+    content: '\25BC';
+    font-size: 70%;
+    transform: scaleY(0.75);
+    right: 4px;
+    color: rgba(0, 0, 0, 0.75);
+    top: 50%;
+    line-height: 0;
+}
+
+.form-control {
+    border-radius: 180px;
+    background-color: #ffffff;
+    border: 1px solid #cdd8dc;
+    color: #708790;
+    font-size: 14px;
+    height: 30px;
+}
+
+.btn {
+    border-radius: 180px;
+    font-size: 14px;
+}
+
+.icon-btn {
+    background-size: 17px;
+}
+
+.btn-default {
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #39AFD1;
+    border-radius: 180px; //
+    font-size: 13px; //
+    padding: 0.15rem 0.75rem 0.25rem 0.75rem; //
+}
+
+.mr-1 {
+    width: 13px;
+}
+
+.icon-btn img {
+    height: 17px;
+    float: left;
+    margin-top: 2px;
+}
+
+.modal-footer>:not(:last-child) {
+    margin-right: 0.25rem;
+}
+
+.icon-btn img {
+    height: 17px;
+    float: left;
+    margin-top: 2px;
+}
+
+.multiple_multi {
+    border-radius: 17px;
+    height: 32px;
+    background: white;
+    padding: 4px;
+}

@@ -1,0 +1,108 @@
+.main {
+    padding-top: 23px;
+}
+
+.container-fluid {
+    padding-right: 70px;
+    padding-left: 70px;
+    max-width: 1850px;
+}
+
+.breadcrumb {
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+    background-color: #d2dbe4;
+    border-radius: 180px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.main-canvas {
+    border: 1px solid #d2d2d2;
+}
+
+h4.card-title {
+    color: #384E64;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+.p-2 {
+    padding: 0.5rem !important;
+}
+
+.card-header {
+    padding: 0.75rem 0.5rem;
+    background-color: transparent;
+    border-bottom: 0px !important;
+    margin-bottom: 0;
+}
+
+.add-force-area {
+    line-height: 40px;
+    color: #384E64;
+    ;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+li.breadcrumb-item a {
+    font-weight: bold !important;
+    color: #384E64;
+}
+
+.breadcrumb-item.active {
+    color: #4B88BC !important;
+    font-weight: bold !important;
+}
+
+.catagoryModel {
+    position: absolute;
+    z-index: 20;
+    margin-top: -255px;
+    width: 500px;
+    left: 850px;
+
+}
+
+.showOverlay {
+    position: fixed;
+    background-color: #2e2c2c;
+    z-index: 15;
+    height: 1400px;
+    width: 1100px;
+    opacity: 0.5;
+    margin-top: -72px;
+}
+
+
+.looping {
+    min-height: 150px;
+
+    .invert {
+        width: 40px;
+        position: relative;
+        overflow: hidden;
+
+        .h4 {
+            font-size: 12px;
+            font-weight: bold;
+            transform: rotate(-90deg);
+            color: #FFFFFF;
+            white-space: nowrap;
+            position: absolute;
+            top: 68%;
+            left: 0px;
+            right: 0px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .delBtn {
+        height: 28px;
+    }
+}
