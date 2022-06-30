@@ -1,5 +1,6 @@
 <div class="modal-dialog modal-dialog-slideout modal-md" role="document">
     <form [formGroup]="formData" (ngSubmit)="collectData()">
+        <input type="hidden" formControlName="id">
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Category</h5>
@@ -43,10 +44,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="btn btn-default addNewLang">
+                                    <a class="btn btn-default addNewLang">
                                         <img class="mr-1" src="../../../assets/images/add-white.svg">
                                         Add Language
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -108,10 +109,10 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-default icon-btn pt-1 pb-1 pl-2 pr-3 mt-1 addNewGuest">
+                <a class="btn btn-default icon-btn pt-1 pb-1 pl-2 pr-3 mt-1 addNewGuest">
                     <img class="mr-1" src="../../../assets/images/add-white.svg">
                     Add Responsibilities
-                </button>
+                </a>
             </div>
         </div>
         <div class="modal-footer p-2">
@@ -119,7 +120,7 @@
                 class="btn icon-btn btn-secondary float-right ml-3 mt-2 btn-width" (click)="closeModel()">
                 Cancel
             </button>
-            <button data-dismiss="modal" aria-label="Close" type="submit" id="saveForceChanges"
+            <button style="background-color:#4CAAAA;color:white;width:73px" data-dismiss="modal" aria-label="Close" type="submit" id="saveForceChanges"
                 class="btn icon-btn search-btn mt-2 float-right btn-width">
                 Save
             </button>

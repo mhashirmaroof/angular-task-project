@@ -1,0 +1,164 @@
+<div class="modal-dialog modal-dialog-slideout modal-md" role="document">
+    <form [formGroup]="subThreshold" (ngSubmit)="collectData()">
+        <input type="hidden" formControlName="id">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sub Threshold</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-container light-bg">
+                            <div class="row">
+                                <div class="col-sm-12 mb-2">
+                                    <div class="options-group">
+                                        <div class="form-group">
+                                            <div class="row d-flex">
+                                                <div class="col-sm-4">
+                                                    <label>Language</label>
+                                                    <select class="form-control">
+                                                        <option>English</option>
+                                                        <option>Arabic</option>
+                                                        <option>French</option>
+                                                        <option>Chinese</option>
+                                                    </select>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <label>
+                                                        Main Threshold name
+                                                    </label>
+                                                    <input type="text" placeholder="Name" formControlName="name"
+                                                        class="form-control" >
+                                                </div>
+                                                <!-- <div class="hidden">
+                                                    <span class="action-icon remove-icon ml-2 lang-action action-icon">
+                                                        <img src="../../../assets/images/delete-icon.svg" />
+                                                    </span>
+                                                </div> -->
+                                                <div class="col-sm-12 mt-2">
+                                                    <label for="exampleFormControlTextarea1">
+                                                        Description
+                                                    </label>
+                                                    <textarea class="form-control text-area"
+                                                        placeholder="Enter Description" rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-default addNewLang">
+                                            <img class="mr-1" src="../../../assets/images/add-white.svg">
+                                            Add Language
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container mt-3">
+                    <div class="row threshold-group">
+                        <div class="col-sm-12 col-md-2">
+                            <div class="form-group">
+                                <select name="select2" class="single single w-100" single>
+                                    <option value="1" data-left="../../../assets/images/alert-icon.svg">1</option>
+                                    <option value="2" data-left="../../../assets/images/danger-icon.svg">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <div class="form-group">
+                                <select name="select2" class="single single w-100" single>
+                                    <option value="1" data-left="../../../assets/images/green-icon.svg">1</option>
+                                    <option value="2" data-left="../../../assets/images/yellow-icon.svg">2</option>
+                                    <option value="3" data-left="../../../assets/images/red-icon.svg">3</option>
+                                    <option value="3" data-left="../../../assets/images/blue-icon.svg">4</option>
+                                    <option value="3" data-left="../../../assets/images/gray-icon.svg">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>
+                                        << /option>
+                                    <option>></option>
+                                    <option>>=</option>
+                                    <option>
+                                        <=< /option>
+                                    <option>=</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <input type="number" placeholder="Value" class="form-control">
+                        </div>
+                        <div class="col-sm-12 col-md-2">
+                            <span class="action-icon remove-icon ml-2 remove-threshold">
+                                <img style="width: 29px ;" src="../../../assets/images/delete-icon.svg" />
+                            </span>
+                        </div>
+                    </div>
+                    <a class="btn btn-default icon-btn pt-1 pb-1 pl-2 pr-3 mt-1 addNewThreshold">
+                        <img class="mr-1" src="../../../assets/images/add-white.svg">
+                        Add
+                    </a>
+                </div>
+                <div class="form-container mt-3">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>
+                                Responsibilities
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-7">
+                                <select name="select2" class="multiple multi w-100">
+                                    <option value="1" data-left="../../../assets/images/ingi.png">Mohammad Abdullah
+                                    </option>
+                                    <option value="2" data-left="../../../assets/images/runa.png">Mohammad Abdullah
+                                    </option>
+                                    <option value="3" data-left="../../../assets/images/jogvan.png">Mohammad Abdullah
+                                    </option>
+                                    <option value="4" data-left="../../../assets/images/noimage.png">Mohammad Abdullah
+                                    </option>
+                                    <option value="5" data-left="../../../assets/images/noimage.png">Mohammad Abdullah
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-3">
+                                <select class="form-control">
+                                    <option>Guest</option>
+                                    <option>Leader</option>
+                                    <option>Editor</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-2">
+                                <span class="remove-icon ml-2  action-icon">
+                                    <img style="width: 29px ;" src="../../../assets/images/delete-icon.svg" />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-default icon-btn pt-1 pb-1 pl-2 pr-3 mt-1 addNewGuest">
+                        <img class="mr-1" src="../../../assets/images/add-white.svg">
+                        Add Responsibilities
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer p-2">
+                <button data-dismiss="modal" aria-label="Close" id="tree-closeBtn" type="button"
+                    class="btn icon-btn btn-secondary float-right ml-3 mt-2 btn-width" (click)="closesubModel()">
+                    <!-- <img src="../../../assets/images/rejected.svg"> -->
+                    Cancel
+                </button>
+                <button style="background-color:#4CAAAA;color:white;width:73px" data-dismiss="modal" aria-label="Close" type="submit" id="tree-saveChanges"
+                    class="btn icon-btn search-btn mt-2 float-right btn-width">
+                    <!-- <img src="../../../assets/images/save-icon.svg" /> -->
+                    Save
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

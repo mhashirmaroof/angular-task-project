@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-add-catagory',
@@ -22,6 +23,7 @@ export class AddCatagoryComponent implements OnInit {
   @Output() sendFormData: EventEmitter <any> = new EventEmitter; 
 
   formData = new FormGroup({
+    id: new FormControl(uuidv4()),
     name: new FormControl(''),
     color: new FormControl('')
   })

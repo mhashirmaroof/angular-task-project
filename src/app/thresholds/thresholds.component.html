@@ -24,18 +24,55 @@
                         </div>
                         <div class="card-body p-2">
                             <div class="main-canvas">
-                                <div *ngFor="let item of dataReceived; index as index" class="d-flex looping">
+                                <div *ngFor="let item of catagoryArray; index as index1" class="d-flex looping">
                                     <div [style.backgroundColor]="item.color" class="invert">
                                         <h4 class="h4">{{item.name}}</h4>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <h5>Space For New internal Component</h5>
+                                        <div class="widthInner" *ngFor="let item2 of item.Main; index as index2">
+                                            <div class="accordion" id="accordionExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingOne">
+                                                        <button class="accordion-button" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne">
+                                                            <span class="spanClass2">{{item2.name}}</span>
+                                                            <img class="delBtn1" (click)="deleteMain(index2, index1)"
+                                                                src="../../assets/images/delete-icon.svg" />
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <div class="flex-grow-1">
+                                                                <div *ngFor="let item3 of item2.Sub; index as index3">
+                                                                    <span class="spanClass2">{{item3.name}}</span>
+                                                                    <img class="delBtn2"
+                                                                        (click)="deletesub(index1, index2, index3)"
+                                                                        src="../../assets/images/delete-icon.svg" />
+                                                                </div>
+                                                                <h5 class="add-force-area px-2"
+                                                                    (click)="subThresholdModel(item.id, item2.id, index1)">
+                                                                    <i class="fas fa-plus btnclass"></i>Add Sub
+                                                                    Threshold
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="add-force-area px-2" (click)="mainThresholdModel(item.id)"> <i
+                                                    class="fas fa-plus btnclass"></i>Add Main Threshold</h5>
+                                        </div>
                                     </div>
-                                    <img class="delBtn" (click)="deleteData(index)" src="../../assets/images/delete-icon.svg" />
+                                    <img class="delBtn" (click)="deleteData(index1)"
+                                        src="../../assets/images/delete-icon.svg" />
 
                                 </div>
                                 <div>
-                                    <a class="add-force-area tree-add-action p-3" (click)="showModelCatagory()">
+                                    <a class="add-force-area p-3" (click)="showModelCatagory()">
                                         <i class="fas fa-plus mr-1"></i>
                                         Add New Category
                                     </a>
@@ -48,5 +85,13 @@
         </div>
     </div>
 </div>
+
 <app-add-catagory class="catagoryModel" *ngIf="showCatagoryModel" (modelClose)="modelClose($event)"
     (sendFormData)="sendFormData($event)"></app-add-catagory>
+
+<app-main-threshold class="mainthresholdModel" *ngIf="showMainThresholdModel"
+    (closeMainThreshold)="closeMainThreshold($event)" (mainThresholdData)="mainThresholdData($event)">
+</app-main-threshold>
+
+<app-sub-threshold class="subthresholdModel" *ngIf="showSubThreshold" (subThresholdData)="subThresholdData($event)"
+    (closesubThreshold)="closesubThreshold($event)"></app-sub-threshold>

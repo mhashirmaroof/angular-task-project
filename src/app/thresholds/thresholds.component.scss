@@ -43,10 +43,10 @@ h4.card-title {
 .add-force-area {
     line-height: 40px;
     color: #384E64;
-    ;
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: -7px;
 }
 
 li.breadcrumb-item a {
@@ -62,7 +62,7 @@ li.breadcrumb-item a {
 .catagoryModel {
     position: absolute;
     z-index: 20;
-    margin-top: -255px;
+    top: 0;
     width: 500px;
     left: 850px;
 
@@ -78,9 +78,20 @@ li.breadcrumb-item a {
     margin-top: -72px;
 }
 
+.mainthresholdModel {
+    position: absolute;
+    z-index: 25;
+    top: 0;
+    width: 500px;
+    left: 850px;
+}
+.btnclass{
+    margin-right: 5px;
+}
 
 .looping {
     min-height: 150px;
+    border: 1px solid lightgrey;
 
     .invert {
         width: 40px;
@@ -104,5 +115,40 @@ li.breadcrumb-item a {
 
     .delBtn {
         height: 28px;
+        position: absolute;
+        right: 17px;
     }
+}
+.grow1{
+    position: absolute;
+    left:53px;
+    top:165px;
+}
+.spanClass{
+    color: black;
+    font-size: 18px;
+}
+.delBtn1{
+    height: 28px;
+    position: absolute;
+    right: 50px
+}
+.widthInner{
+width: 93%;
+}
+.subthresholdModel{
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    width: 500px;
+    left: 850px;
+}
+.spanClass2{
+    color: black;
+    font-size: 18px;
+}
+.delBtn2{
+    height: 28px;
+    position: absolute;
+    right: 160px
 }

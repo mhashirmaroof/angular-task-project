@@ -7,13 +7,17 @@ import { HeaderComponent } from './header/header.component';
 import { ThresholdsComponent } from './thresholds/thresholds.component';
 import { AddCatagoryComponent } from './thresholds/add-catagory/add-catagory.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainThresholdComponent } from './thresholds/main-threshold/main-threshold.component';
+import { SubThresholdComponent } from './thresholds/sub-threshold/sub-threshold.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ThresholdsComponent,
-    AddCatagoryComponent
+    AddCatagoryComponent,
+    MainThresholdComponent,
+    SubThresholdComponent
   ],
   imports: [
     BrowserModule,
